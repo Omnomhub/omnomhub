@@ -1,0 +1,21 @@
+---
+#- name: App | Write to Folder
+#  file: path={{ write_to_folder}} state=directory
+
+#- name: App | Folder Permissions (Part 1)
+#  command: sudo setfacl -R -m u:www-data:rwX -m u:vagrant:rwX {{ write_to_folder}}
+
+#- name: App | Folder Permissions (Part 2)
+#  command: sudo setfacl -dR -m u:www-data:rwX -m u:vagrant:rwX {{ write_to_folder}}
+
+#- name: App | Populate parameters.yml
+#  action: template src=../files/parameters.dist.yml dest={{ root_folder }}/app/config/parameters.yml
+
+#- name: App | Composer install
+#  command: composer install chdir={{ root_folder }}
+
+#- name: App | Assetic Watch Config
+#  action: template src=../files/supervisord.conf dest=/etc/supervisor/conf.d/amsphp.conf
+
+#- name: App | Reload supervisor to launch processes
+#  command: supervisorctl reload

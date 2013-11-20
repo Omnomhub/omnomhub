@@ -1,0 +1,14 @@
+---
+- name: NGINX | Disable Default Host Config
+  command: rm /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
+  notify: restart nginx
+
+- name: NGINX | Copy Host Config
+  action: template src=../files/nginx-recipehub.conf dest=/etc/nginx/sites-available/recipehub.conf
+
+- name: NGINX | Enable Host Config
+  command: ln -s /etc/nginx/sites-available/recipehub.conf /etc/nginx/sites-enabled/recipehub.conf
+  notify: restart nginx
+
+- name: NGINX | Ensure application files are present
+  file: path={{ document_root }} state=directory

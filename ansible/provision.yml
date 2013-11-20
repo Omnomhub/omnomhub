@@ -1,0 +1,29 @@
+---
+- hosts: vagrant.recipehub.dev
+  sudo: true
+  vars:
+    root_folder: /var/www/recipehub
+    document_root: "{{ root_folder }}/web/"
+    write_to_folder: /dev/shm/recipehub
+    dbname: recipehub
+    dbuser: root
+    dbpasswd: root
+  tasks:
+    - include: tasks/common.yml
+    - include: tasks/build.yml
+    - include: tasks/development.yml
+    - include: tasks/host.yml
+    - include: tasks/app.yml
+
+  handlers:
+    - name: restart nginx
+      service: name=nginx state=restarted
+
+    - name: restart fpm
+      service: name=php5-fpm state=restarted
+
+    - name: restart supervisor
+      service: name=supervisord state=restarted
+
+    - name: reload supervisor
+      command: supervisorctl reload

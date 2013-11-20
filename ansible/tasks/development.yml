@@ -1,0 +1,43 @@
+---
+# Development related tasks
+
+# NGINX
+- name: NGINX
+  action: apt pkg=nginx state=installed
+
+#Neo4J from http://debian.neo4j.org/
+
+- name: Neo4j Repository Signing Key
+  action: apt_key url=http://debian.neo4j.org/neotechnology.gpg.key state=present
+
+- name: Add Neo4j Repository - Debian
+  action: apt_repository repo='deb http://debian.neo4j.org/repo stable/' update_cache=yes
+
+- name: Neo4J
+  action: apt pkg=neo4j state=installed
+
+# PHP
+- name: PHP 5.5 Custom Repo
+  apt_repository: repo='ppa:ondrej/php5' update_cache=yes
+
+- name: PHP and Modules
+  action: apt pkg=$item state=latest
+  notify: restart fpm
+  tags: common
+  with_items:
+    - php5-fpm
+    - php5-cli
+
+# Configurations
+- name: PHP | Config timezone
+  action: ini_file dest=/etc/php5/mods-available/timezone.ini section=Date option=date.timezone value=Europe/Amsterdam
+  notify:
+    - restart nginx
+
+- name: PHP | Enable Custom Config
+  action: shell php5enmod -s ALL timezone
+
+# PHP Tools
+
+- name: Composer
+  shell: curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer creates=/usr/local/bin/composer
