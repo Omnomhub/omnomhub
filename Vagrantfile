@@ -12,7 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
-  config.vm.synced_folder "./", "/var/www/recipehub", id: "vagrant-root"
+  config.vm.synced_folder "./", "/var/www/recipehub", id: "vagrant-root", nfs: true
 
   config.vm.network :private_network, ip: "192.168.13.37"
 
