@@ -16,6 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network :private_network, ip: "192.168.13.37"
   config.vm.network "forwarded_port", guest: 7474, host: 7474
+  config.vm.network "forwarded_port", guest: 80, host: 8383
 
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "ansible/provision.yml"
