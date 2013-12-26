@@ -12,3 +12,7 @@
 
 - name: NGINX | Ensure application files are present
   file: path={{ document_root }} state=directory
+
+- name: NEO4J | Copy Server Config
+  action: template src=../files/neo4j-server.properties dest=/etc/neo4j/neo4j-server.properties
+  notify: restart neo4j

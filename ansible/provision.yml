@@ -27,3 +27,6 @@
 
     - name: reload supervisor
       command: supervisorctl reload
+
+    - name: restart neo4j
+      service: name=neo4j-service state=restarted
