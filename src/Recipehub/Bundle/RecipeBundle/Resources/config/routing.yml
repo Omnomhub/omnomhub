@@ -1,0 +1,3 @@
+recipehub_recipe_homepage:
+    pattern:  /
+    defaults: { _controller: RecipehubRecipeBundle:Default:index }

@@ -1,0 +1,7 @@
+parameters:
+#    recipehub_recipe.example.class: Recipehub\Bundle\RecipeBundle\Example
+
+services:
+#    recipehub_recipe.example:
+#        class: %recipehub_recipe.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
