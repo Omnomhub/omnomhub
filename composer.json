@@ -18,7 +18,9 @@
         "sensio/distribution-bundle": "2.3.*",
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+        "everyman/neo4jphp": "dev-master",
+        "hirevoice/neo4jphp-ogm": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
