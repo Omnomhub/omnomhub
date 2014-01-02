@@ -1,5 +1,5 @@
 ---
-- hosts: vagrant.recipehub.dev
+- hosts: omnomhub.dev
   sudo: true
   vars:
     root_folder: /var/www/recipehub
