@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "a82586ff21aa24fce63134feaf38bf8c",
+    "hash": "33d90bceda96106cc99973bd5aab46ab",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -663,53 +663,6 @@
                 "neo4j"
             ],
             "time": "2013-12-15 01:21:17"
-        },
-        {
-            "name": "hirevoice/neo4jphp-ogm",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lphuberdeau/Neo4j-PHP-OGM.git",
-                "reference": "9fbc9e9a64207e491842b03452915d8fedbcba7b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lphuberdeau/Neo4j-PHP-OGM/zipball/9fbc9e9a64207e491842b03452915d8fedbcba7b",
-                "reference": "9fbc9e9a64207e491842b03452915d8fedbcba7b",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/common": ">=2.2.0,<2.5.0-dev",
-                "everyman/neo4jphp": "*",
-                "php": ">=5.3.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "HireVoice": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Louis-Philippe Huberdeau",
-                    "email": "lphuberdeau@gmail.com",
-                    "homepage": "http://lphuberdeau.com"
-                }
-            ],
-            "description": "Doctrine2-style entity mapper for Neo4j graph database",
-            "homepage": "https://github.com/lphuberdeau/Neo4j-PHP-OGM",
-            "keywords": [
-                "database",
-                "doctrine",
-                "entity-mapper",
-                "graph",
-                "neo4j"
-            ],
-            "time": "2013-12-18 16:02:15"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1615,8 +1568,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "everyman/neo4jphp": 20,
-        "hirevoice/neo4jphp-ogm": 20
+        "everyman/neo4jphp": 20
     },
     "platform": {
         "php": ">=5.3.3"
