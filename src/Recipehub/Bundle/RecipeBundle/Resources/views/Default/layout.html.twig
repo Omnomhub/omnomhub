@@ -4,8 +4,11 @@
 	<title>Recipehub</title>
 
 	<!-- Links to external stylesheets -->
-	<link rel="stylesheet" href="/bundles/recipehubrecipe/css/main.css" type="text/css">
 	<link rel="shortcut icon" href="/img/favicon.ico">
+
+	{% block stylesheets %}
+            <link href="{{ asset('/css/main.css') }}" rel="stylesheet" />
+    {% endblock %}
 	
 </head>
 
