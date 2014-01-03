@@ -7,10 +7,10 @@ How to install
 =========
 
 You will need the following:
-* Vagrant (As of writing version 1.4.2 works)
-* VirtualBox (As of writing version 4.3.6)
-* Ansible
-* Composer
+* Vagrant (As of writing version 1.4.2 works) - http://www.vagrantup.com/downloads.html
+* VirtualBox (As of writing version 4.3.6) - https://www.virtualbox.org/wiki/Downloads
+* Ansible - http://docs.ansible.com/intro_installation.html
+* Composer - http://getcomposer.org/doc/00-intro.md
 
 Run "composer install"
 Add "192.168.13.37	omnomhub.dev" to your hosts file
