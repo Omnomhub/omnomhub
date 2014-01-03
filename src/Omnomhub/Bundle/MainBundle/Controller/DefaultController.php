@@ -1,6 +1,6 @@
 <?php
 
-namespace Recipehub\Bundle\RecipeBundle\Controller;
+namespace Omnomhub\Bundle\MainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('RecipehubRecipeBundle:Default:index.html.twig');
+        return $this->render('OmnomhubMainBundle:Default:index.html.twig');
     }
 }
