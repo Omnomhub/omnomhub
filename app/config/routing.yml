@@ -1,4 +1,4 @@
 recipehub_recipe:
-    resource: "@RecipehubRecipeBundle/Resources/config/routing.yml"
+    resource: "@OmnomhubMainBundle/Resources/config/routing.yml"
     prefix:   /
 

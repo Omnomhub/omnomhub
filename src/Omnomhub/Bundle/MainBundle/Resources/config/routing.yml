@@ -1,0 +1,3 @@
+recipehub_main_homepage:
+    pattern:  /
+    defaults: { _controller: OmnomhubMainBundle:Default:index }
