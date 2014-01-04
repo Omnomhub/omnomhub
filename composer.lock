@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "33d90bceda96106cc99973bd5aab46ab",
+    "hash": "74924c8e4c125378d34796f2611e21f3",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -765,6 +765,52 @@
                 "sql"
             ],
             "time": "2013-11-27 22:51:13"
+        },
+        {
+            "name": "klaussilveira/neo4j-client-bundle",
+            "version": "dev-master",
+            "target-dir": "Neo4j/Client/ClientBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/klaussilveira/neo4j-client-bundle.git",
+                "reference": "7e94552fd29ab7460b0d9437eaed4a64a937af2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/klaussilveira/neo4j-client-bundle/zipball/7e94552fd29ab7460b0d9437eaed4a64a937af2a",
+                "reference": "7e94552fd29ab7460b0d9437eaed4a64a937af2a",
+                "shasum": ""
+            },
+            "require": {
+                "everyman/neo4jphp": ">=0.1.0",
+                "php": ">=5.3.2"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Neo4j\\Client\\ClientBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Klaus Silveira",
+                    "email": "klaussilveira@php.net",
+                    "homepage": "http://www.klaussilveira.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This bundle provides a simple integration of Josh Adell's Neo4jPHP library into Symfony2",
+            "homepage": "https://github.com/klaussilveira/neo4j-client-bundle",
+            "keywords": [
+                "database",
+                "graph",
+                "neo4j"
+            ],
+            "time": "2012-11-20 22:18:37"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -1568,7 +1614,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "everyman/neo4jphp": 20
+        "everyman/neo4jphp": 20,
+        "klaussilveira/neo4j-client-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"
