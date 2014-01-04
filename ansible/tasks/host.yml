@@ -4,10 +4,10 @@
   notify: restart nginx
 
 - name: NGINX | Copy Host Config
-  action: template src=../files/nginx-recipehub.conf dest=/etc/nginx/sites-available/recipehub.conf
+  action: template src=../files/nginx-omnomhub.conf dest=/etc/nginx/sites-available/omnomhub.conf
 
 - name: NGINX | Enable Host Config
-  command: ln -s /etc/nginx/sites-available/recipehub.conf /etc/nginx/sites-enabled/recipehub.conf
+  command: ln -s /etc/nginx/sites-available/omnomhub.conf /etc/nginx/sites-enabled/omnomhub.conf
   notify: restart nginx
 
 - name: NGINX | Ensure application files are present
