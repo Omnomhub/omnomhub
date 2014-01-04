@@ -2,10 +2,10 @@
 - hosts: omnomhub.dev
   sudo: true
   vars:
-    root_folder: /var/www/recipehub
+    root_folder: /var/www/omnomhub
     document_root: "{{ root_folder }}/web/"
-    write_to_folder: /dev/shm/recipehub
-    dbname: recipehub
+    write_to_folder: /dev/shm/omnomhub
+    dbname: omnomhub
     dbuser: root
     dbpasswd: root
   tasks:
