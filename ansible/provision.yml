@@ -1,5 +1,5 @@
 ---
-- hosts: omnomhub.dev
+- hosts: all
   sudo: true
   vars:
     root_folder: /var/www/omnomhub
