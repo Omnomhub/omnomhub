@@ -57,6 +57,10 @@ doctrine:
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true
 
+neo4j_client:
+    host: 'localhost'
+    port: 7474
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: %mailer_transport%
