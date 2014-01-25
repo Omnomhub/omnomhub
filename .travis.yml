@@ -10,6 +10,8 @@ matrix:
   allow_failures:
     - php: hhvm
 
-before_script: composer install -n
+before_script:
+  - composer install -n
+  - chmod 0777 tests/_log -R
 
 script: "`pwd`/bin/codecept run -c `pwd`/codeception.yml"
