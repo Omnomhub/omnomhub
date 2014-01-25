@@ -12,4 +12,4 @@ matrix:
 
 before_script: composer install -n
 
-script: phpunit -c app
+script: "`pwd`/bin/codecept run -c `pwd`/codeception.yml"

@@ -20,6 +20,9 @@
         "everyman/neo4jphp": "dev-master",
         "klaussilveira/neo4j-client-bundle": "dev-master"
     },
+    "require-dev": {
+        "codeception/codeception": "*"
+    },
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
