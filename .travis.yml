@@ -13,6 +13,6 @@ matrix:
 
 before_script:
   - composer install -n
-  - chmod 0777 tests/_log -R
+  - "chmod 0777 `pwd`/tests/_log -R"
 
 script: "`pwd`/bin/codecept run -c `pwd`/codeception.yml"
