@@ -10,6 +10,9 @@ matrix:
   allow_failures:
     - php: hhvm
 
+notifications:
+  irc: "chat.freenode.net#omnomhub"
+
 before_script: composer install -n
 
 script: "`pwd`/bin/codecept run -c `pwd`/codeception.travis.yml unit"
