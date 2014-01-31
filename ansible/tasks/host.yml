@@ -13,6 +13,14 @@
 - name: NGINX | Ensure application files are present
   file: path={{ document_root }} state=directory
 
+- name: PHP | Remove default pool config
+  command: rm /etc/php5/fpm/pool.d/www.conf
+  notify: restart fpm
+
+- name: PHP | Copy Pool Config
+  action: template src=../files/php-fpm-omnomhub.conf dest=/etc/php5/fpm/pool.d/omnomhub.conf
+  notify: restart fpm
+
 - name: NEO4J | Copy Server Config
   action: template src=../files/neo4j-server.properties dest=/etc/neo4j/neo4j-server.properties
   notify: restart neo4j
