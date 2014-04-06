@@ -1,0 +1,10 @@
+{
+  "name": "OmNomHub",
+  "ignore": [
+    ".jshintrc",
+    "**/*"
+  ],
+  "dependencies": {
+      "bootstrap-sass": "~3.0.2"
+  }
+}
