@@ -12,7 +12,7 @@ You will need the following:
 * Ansible - http://docs.ansible.com/intro_installation.html
 * Composer - http://getcomposer.org/doc/00-intro.md
 
-Run "composer install", "npm install", "bower install" and "gulp".
+Run "composer install", "npm install", "npm install bower" and "npm install gulp".
 Add "192.168.13.37	omnomhub.dev" to your hosts file
 
 You will then be able to access omnomhub.dev from your browser.
