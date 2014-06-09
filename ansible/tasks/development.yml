@@ -43,3 +43,10 @@
 
 - name: Composer
   shell: curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer creates=/usr/local/bin/composer
+  
+# NPM
+- name: Node/NPM Custom Repo
+  apt_repository: repo='ppa:chris-lea/node.js' update_cache=yes
+  
+- name: Node/NPM
+  action: apt pkg=nodejs state=installed
