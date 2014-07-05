@@ -14,3 +14,4 @@
 .vagrant/machines/default/virtualbox/id
 vagrant_ansible_inventory_default
 .vagrant/
+node_modules/
