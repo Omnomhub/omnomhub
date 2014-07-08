@@ -12,7 +12,7 @@
   },
   "homepage": "http://devicelight.net/",
   "devDependencies": {
-    "gulp": "^3.6.0",
+    "gulp": "^3.7.0",
     "gulp-concat": "^2.2.0",
     "gulp-uglify": "^0.2.1",
     "gulp-cssmin": "^0.1.4",

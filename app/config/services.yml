@@ -1,0 +1,7 @@
+parameters:
+    user.class: Omnomhub\Bundle\MainBundle\Model\User\User
+
+services:
+    user:
+        class: %user.class%
+        arguments: ["@neo4j.client"]
