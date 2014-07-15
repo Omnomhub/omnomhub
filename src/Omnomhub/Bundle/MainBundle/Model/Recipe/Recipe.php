@@ -9,6 +9,7 @@ class Recipe
     protected $photo;
     protected $description;
     protected $ingredients;
+    protected $parent;
 
     /**
      * @param mixed $description
@@ -88,5 +89,21 @@ class Recipe
     public function getTile()
     {
         return $this->tile;
+    }
+
+    /**
+     * @param mixed $parent
+     */
+    public function setParent($parent)
+    {
+        $this->parent = $parent;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getParent()
+    {
+        return $this->parent;
     }
 }
