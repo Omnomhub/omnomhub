@@ -1,7 +1,23 @@
 parameters:
+    group.class: Omnomhub\Bundle\MainBundle\Model\Group\Group
+    message.class: Omnomhub\Bundle\MainBundle\Model\Group\Message
+    ingredient.class: Omnomhub\Bundle\MainBundle\Model\Recipe\Ingredient
+    recipe.class: Omnomhub\Bundle\MainBundle\Model\Recipe\Recipe
     user.class: Omnomhub\Bundle\MainBundle\Model\User\User
 
 services:
+    group:
+        class: %group.class%
+        arguments: ["@neo4j.client"]
+    message:
+        class: %message.class%
+        arguments: ["@neo4j.client"]
+    ingredient:
+        class: %ingredient.class%
+        arguments: ["@neo4j.client"]
+    recipe:
+        class: %recipe.class%
+        arguments: ["@neo4j.client"]
     user:
         class: %user.class%
         arguments: ["@neo4j.client"]
