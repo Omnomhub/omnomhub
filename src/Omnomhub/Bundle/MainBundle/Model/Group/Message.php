@@ -9,6 +9,12 @@ class Message
     protected $message;
     protected $parent;
     protected $timestamp;
+    protected $client;
+
+    public function __construct($client)
+    {
+        $this->client = $client;
+    }
 
     /**
      * @param mixed $author

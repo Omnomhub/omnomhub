@@ -9,6 +9,12 @@ class Ingredient
     protected $unit;
     protected $amount;
     protected $photo;
+    protected $client;
+
+    public function __construct($client)
+    {
+        $this->client = $client;
+    }
 
     /**
      * @param mixed $amount

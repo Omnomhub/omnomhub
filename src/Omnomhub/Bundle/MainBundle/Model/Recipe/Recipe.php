@@ -10,6 +10,12 @@ class Recipe
     protected $description;
     protected $ingredients;
     protected $parent;
+    protected $client;
+
+    public function __construct($client)
+    {
+        $this->client = $client;
+    }
 
     /**
      * @param mixed $description

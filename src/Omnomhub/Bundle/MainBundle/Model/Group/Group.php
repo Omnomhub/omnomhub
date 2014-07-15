@@ -12,6 +12,12 @@ class Group
     protected $description;
     protected $recipes;
     protected $messages;
+    protected $client;
+
+    public function __construct($client)
+    {
+        $this->client = $client;
+    }
 
     /**
      * @param mixed $description
