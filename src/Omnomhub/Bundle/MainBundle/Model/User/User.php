@@ -4,6 +4,7 @@ namespace Omnomhub\Bundle\MainBundle\Model\User;
 
 class User
 {
+	protected $id;
 	protected $email;
 	protected $displayname;
 	protected $gravatarEmail;
@@ -15,12 +16,22 @@ class User
 		$this->client = $client;
 	}
 
+	public function setId($id)
+	{
+		$this->id = $id;
+	}
+
+	public function getId()
+	{
+		return $this->id;
+	}
+
 	public function setEmail($email)
 	{
 		$this->email = $email;
 	}
 
-	public function getEmail() 
+	public function getEmail()
 	{
 		return $this->email;
 	}
