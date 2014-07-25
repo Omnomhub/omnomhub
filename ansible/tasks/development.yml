@@ -21,7 +21,7 @@
   apt_repository: repo='ppa:ondrej/php5' update_cache=yes
 
 - name: PHP and Modules
-  action: apt pkg=$item state=latest
+  action: apt pkg={{item}} state=latest
   notify: restart fpm
   tags: common
   with_items:
