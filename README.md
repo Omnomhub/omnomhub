@@ -20,7 +20,7 @@ How to install
     * [Ansible][]
     * [Composer][]
 
-2. Run `composer install`, `npm install`, `npm install bower` and `npm install gulp`.
+2. Run `composer install`
 
 3. Add the following line to `/etc/hosts`
 
